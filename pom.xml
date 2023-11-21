@@ -28,6 +28,7 @@
         <module>basic-exception</module>
         <module>basic-restful</module>
         <module>basic-util</module>
+        <module>basic-login</module>
     </modules>
 
     <dependencies>
