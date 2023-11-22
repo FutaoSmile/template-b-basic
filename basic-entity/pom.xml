@@ -23,6 +23,14 @@
 
 
     <dependencies>
+        <!--加这个依赖的原因是，springboot-web应用依赖这个项目之后，在序列化继承了这个项目中的类之后，因为这个项目中的类标记了mybatisplus的注解，
+        Jackson在序列化的时候，会读取，但是因为mybatisplus中mybatis是provider的，所以会导致子项目中报错java.lang.ClassNotFoundException: org.apache.ibatis.type.JdbcType
+        https://blog.csdn.net/liu346487291/article/details/126263321
+        -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
