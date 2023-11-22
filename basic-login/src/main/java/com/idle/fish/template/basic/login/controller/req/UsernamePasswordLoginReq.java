@@ -1,4 +1,4 @@
-package com.idle.fish.template.basic.login;
+package com.idle.fish.template.basic.login.controller.req;
 
 import lombok.Getter;
 import lombok.Setter;

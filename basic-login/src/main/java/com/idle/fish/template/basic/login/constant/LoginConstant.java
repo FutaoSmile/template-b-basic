@@ -1,4 +1,4 @@
-package com.idle.fish.template.basic.login;
+package com.idle.fish.template.basic.login.constant;
 
 import lombok.experimental.UtilityClass;
 
@@ -8,5 +8,5 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class LoginConstant {
-    String SESSION_ATTR = "currentUser";
+    public static final String SESSION_ATTR = "currentUser";
 }

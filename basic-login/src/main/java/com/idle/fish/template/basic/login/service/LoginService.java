@@ -1,4 +1,4 @@
-package com.idle.fish.template.basic.login;
+package com.idle.fish.template.basic.login.service;
 
 import com.idle.fish.tamplate.basic.user.BasicUser;
 

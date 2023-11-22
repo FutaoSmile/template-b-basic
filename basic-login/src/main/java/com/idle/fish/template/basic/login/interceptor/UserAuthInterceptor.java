@@ -1,9 +1,10 @@
-package com.idle.fish.template.basic.login;
+package com.idle.fish.template.basic.login.interceptor;
 
 import com.idle.fish.tamplate.basic.user.BasicUser;
 import com.idle.fish.tamplate.basic.user.CurrentUser;
 import com.idle.fish.template.basic.exception.Asserts;
 import com.idle.fish.template.basic.exception.LogicException;
+import com.idle.fish.template.basic.login.constant.LoginConstant;
 import com.idle.fish.template.basic.restful.constants.ErrorMessages;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
