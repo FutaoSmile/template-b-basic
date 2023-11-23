@@ -19,6 +19,13 @@ public class BasicUser extends BaseIdUserTime {
      */
     private String username;
 
+    /**
+     * 角色
+     *
+     * @see com.idle.fish.tamplate.basic.user.enums.UserRoleEnum
+     */
+    private Integer role;
+
     @Override
     public String toString() {
         return JSON.toJSONString(this);

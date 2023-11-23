@@ -20,6 +20,10 @@
             <artifactId>basic-entity</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.idle.fish</groupId>
+            <artifactId>basic-util</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
         </dependency>

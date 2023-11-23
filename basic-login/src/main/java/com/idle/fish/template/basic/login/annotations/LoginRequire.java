@@ -1,6 +1,6 @@
 package com.idle.fish.template.basic.login.annotations;
 
-import com.idle.fish.template.basic.login.enums.UserRoleEnum;
+import com.idle.fish.tamplate.basic.user.enums.UserRoleEnum;
 
 import java.lang.annotation.*;
 

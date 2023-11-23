@@ -1,4 +1,4 @@
-package com.idle.fish.template.basic.login.enums;
+package com.idle.fish.tamplate.basic.user.enums;
 
 import com.idle.fish.template.basic.util.enums.IEnum;
 import lombok.AllArgsConstructor;
