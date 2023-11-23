@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,13 +49,18 @@ public class LoginAuthInterceptor implements HandlerInterceptor {
                 CurrentUser.set(currentUser);
             }
         }
-
         return true;
     }
 
 
     @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        // 通过DispatcherServlet源码可以知道，如果发生了异常，是不会执行这个方法的
+    }
+
+    @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         CurrentUser.clear();
+        log.debug("清除线程缓存");
     }
 }
