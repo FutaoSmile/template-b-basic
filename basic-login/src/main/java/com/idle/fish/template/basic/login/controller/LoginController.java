@@ -2,6 +2,7 @@ package com.idle.fish.template.basic.login.controller;
 
 import com.idle.fish.tamplate.basic.user.BasicUser;
 import com.idle.fish.template.basic.exception.Asserts;
+import com.idle.fish.template.basic.login.peoperties.BasicLoginProperties;
 import com.idle.fish.template.basic.login.service.LoginService;
 import com.idle.fish.template.basic.login.controller.req.UsernamePasswordLoginReq;
 import com.idle.fish.template.basic.login.constant.LoginConstant;
@@ -27,6 +28,9 @@ public class LoginController {
     @Resource
     private LoginService loginService;
 
+    @Resource
+    private BasicLoginProperties basicLoginProperties;
+
     /**
      * 用户名密码登录
      *
@@ -42,7 +46,7 @@ public class LoginController {
         // 将用户信息保存到session会话中
         session.setAttribute(LoginConstant.SESSION_ATTR, basicUser);
         // 设置session会话过期时间，秒
-        session.setMaxInactiveInterval(5);
+        session.setMaxInactiveInterval(Math.toIntExact(basicLoginProperties.getLoginSessionDuration().getSeconds()));
     }
 
 }
