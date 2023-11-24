@@ -156,6 +156,11 @@
                 <artifactId>basic-util</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.idle.fish</groupId>
+                <artifactId>basic-dubbo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
