@@ -10,7 +10,7 @@ import org.apache.dubbo.rpc.*;
  * 如果provider抛出异常，会被打印出来，但是可以通过设置 <dubbo:provider filter="-exception,quietExceptionFilter"/> 来关闭dubbo默认的异常拦截器打印
  * 但是为了感知异常的发生，所以把日志级别设置为了warn
  *
- * @author futao
+ * @author idle fish
  * @since 2023/11/23
  */
 @Slf4j

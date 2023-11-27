@@ -9,7 +9,7 @@ import org.apache.dubbo.rpc.*;
  * - 异步的坑：在一次调用过程中，如果 A->B 是异步的，那么 B->C 也会是异步的，因为RpcContext中被标记为async
  * - 需要通过Filter在生产者移除异步标记
  *
- * @author futao
+ * @author idle fish
  * @since 2023/11/23
  */
 @Slf4j
