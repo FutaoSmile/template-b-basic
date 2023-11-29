@@ -125,6 +125,12 @@
                 <artifactId>emoji-java</artifactId>
                 <version>4.0.0</version>
             </dependency>
+            <!--生成二维码与条形码-->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>3.5.2</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.idle.fish</groupId>
