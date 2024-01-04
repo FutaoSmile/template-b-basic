@@ -9,4 +9,4 @@
 | **PDF**发票识别   |https://gitee.com/sanluan/einvoice |       |
 | 文件在线预览        | https://github.com/kekingcn/kkFileView |       |
 | 企微api的Java客户端 | https://felord.cn/wecom/overview.html | ⭐⭐⭐⭐⭐ |
-|               |   |       |
+| jfreechart 创建各种图表   | https://iowiki.com/jfreechart/jfreechart_quick_guide.html  |       |
