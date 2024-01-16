@@ -25,8 +25,8 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, BaseIdUserTime.ID_FIELD, Long.class, Optional.ofNullable(user).map(BasicUser::getId).orElse(0L));
         this.setFieldValByName(BaseIdUserTime.CREATE_BY_FIELD, System.currentTimeMillis(), metaObject);
 
-        this.setFieldValByName(BaseIdUserTime.UPDATE_BY_FIELD, Optional.ofNullable(user).map(BasicUser::getId).orElse(0L), metaObject);
-        this.setFieldValByName(BaseIdUserTime.UPDATE_DATE_TIME_FIELD, System.currentTimeMillis(), metaObject);
+        this.setFieldValByName(BaseIdUserTime.CREATE_BY_FIELD, Optional.ofNullable(user).map(BasicUser::getId).orElse(0L), metaObject);
+        this.setFieldValByName(BaseIdUserTime.CREATE_DATE_TIME_FIELD, System.currentTimeMillis(), metaObject);
     }
 
     @Override

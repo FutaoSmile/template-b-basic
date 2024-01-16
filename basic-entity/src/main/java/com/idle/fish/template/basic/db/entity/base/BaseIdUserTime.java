@@ -27,7 +27,7 @@ public abstract class BaseIdUserTime extends BaseIdCreateDateTime {
     /**
      * 更新时间
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.UPDATE)
     private Long updateDateTime;
     public static final String UPDATE_DATE_TIME_FIELD = "updateDateTime";
     public static final String UPDATE_DATE_TIME_COLUMN = "update_date_time";
@@ -35,7 +35,7 @@ public abstract class BaseIdUserTime extends BaseIdCreateDateTime {
     /**
      * 更新人
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.UPDATE)
     private Long updateBy;
     public static final String UPDATE_BY_FIELD = "updateBy";
     public static final String UPDATE_BY_COLUMN = "update_by";
