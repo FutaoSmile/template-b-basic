@@ -25,13 +25,19 @@ public class UserDubboFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
         RpcContext rpcContext = RpcContext.getContext();
         if (rpcContext.isConsumerSide()) {
-            Optional.ofNullable(CurrentUser.getUser())
-                    .ifPresent(x -> rpcContext.setAttachment(UserConstants.DUBBO_ATTACHMENT_USER, x));
-            log.debug("set current thread user to rpc context attachment");
+            BasicUser currentUser = CurrentUser.getUser();
+            rpcContext.setAttachment(UserConstants.DUBBO_ATTACHMENT_USER, currentUser);
+            log.debug("set current thread user to rpc context attachment:{}", currentUser);
         } else if (rpcContext.isProviderSide()) {
-            Optional.ofNullable(rpcContext.getObjectAttachment(UserConstants.DUBBO_ATTACHMENT_USER))
-                    .ifPresent(x -> CurrentUser.set((BasicUser) x));
-            log.debug("read user from rpc context attachment and set user to thread local");
+            BasicUser currentUser = (BasicUser) rpcContext.getObjectAttachment(UserConstants.DUBBO_ATTACHMENT_USER);
+            CurrentUser.set(currentUser);
+            log.debug("read user from rpc context attachment and set user to thread local: {}", currentUser);
+            try {
+                return invoker.invoke(invocation);
+            } finally {
+                CurrentUser.clear();
+                log.debug("clean user from thread local: {}", currentUser);
+            }
         }
         return invoker.invoke(invocation);
     }
